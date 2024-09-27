@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/img/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Formulario de Feedback interno</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
                 <img src="assets/img/undraw_feedback_re_urmj.svg">
             </div>
             <div class="form">
-                <form action=".php" method="post">
+                <form action="enviar.php" method="POST">
                         <div class="form-header">
                             <div class="title">
                                 <h1>Formulario de Feedback</h1>
@@ -33,8 +33,12 @@
                                 <label for="email">E-mail</label>
                             </div>
                             <div class="input-box">
-                                <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxx-xxxx" required>
-                                <label for="telefone">telefone</label>
+                                <input type="tel" id="telefone" name="telefone" pattern="[0-9]+" placeholder="(xx) xxxx-xxxx" required>
+                                <label for="fone">telefone</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
+                                <label for="data_nascimento">data de nascimento</label>
                             </div>
                             <div class="gender-inputs">
                                 <div class="gender-title">
@@ -58,25 +62,25 @@
                                         <label for="none">Prefiro não dizer</label>
                                     </div>
                                 </div>
-                            <div class="rating">
-                                <input type="radio" id="estrela5" name="avaliacao" value="5" required>
-                                <label for="estrela5">★</label>
-
-                                <input type="radio" id="estrela4" name="avaliacao" value="4">
-                                <label for="estrela4">★</label>
-
-                                <input type="radio" id="estrela3" name="avaliacao" value="3">
-                                <label for="estrela3">★</label>
-
-                                <input type="radio" id="estrela2" name="avaliacao" value="2">
-                                <label for="estrela2">★</label>
-
-                                <input type="radio" id="estrela1" name="avaliacao" value="1">
-                                <label for="estrela1">★</label>
-                            </div>
                             <div class="input-box">
                                 <label for="feedback">Feedback:</label>
                                 <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                                <div class="rating">
+                                    <input type="radio" id="estrela5" name="avaliacao" value="5" required>
+                                    <label for="estrela5">★</label>
+    
+                                    <input type="radio" id="estrela4" name="avaliacao" value="4">
+                                    <label for="estrela4">★</label>
+    
+                                    <input type="radio" id="estrela3" name="avaliacao" value="3">
+                                    <label for="estrela3">★</label>
+    
+                                    <input type="radio" id="estrela2" name="avaliacao" value="2">
+                                    <label for="estrela2">★</label>
+    
+                                    <input type="radio" id="estrela1" name="avaliacao" value="1">
+                                    <label for="estrela1">★</label>
+                                </div>
                             </div>
                             <div class="continue-button">
                                 <button><a href="#">Enviar</a></button>
